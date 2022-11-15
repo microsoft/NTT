@@ -74,7 +74,7 @@ To reproduce Figures 9 and 10, plot the evaluation of all ANTT models by:
     
 # Passing the Navigation Turing Test
 
-In later work on ["How Humans Perceive Human-like Behavior in Video Game Navigation"](https://www.microsoft.com/en-us/research/publication/how-humans-perceive-human-like-behavior-in-video-game-navigation/) published at CHI 2022 we presented the first agent to pass the Navigation Turing Test. [Videos of the CHI 2022 agent are available here.](https://papersdata.blob.core.windows.net/zuniga2022/videos-new-agent.zip)
+In later work on ["How Humans Perceive Human-like Behavior in Video Game Navigation"](https://www.microsoft.com/en-us/research/publication/how-humans-perceive-human-like-behavior-in-video-game-navigation/) published at CHI 2022 we presented the first agent to pass the Navigation Turing Test. [Videos of the CHI 2022 agent are available here.](https://papersdata.blob.core.windows.net/rewardshapingagent2022/videos-new-agent.zip)
 
 # License
 Code is licensed under MIT, data and all other content is licensed under Microsoft Research License Agreement (MSR-LA). See LICENSE folder.
