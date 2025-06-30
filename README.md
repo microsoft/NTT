@@ -1,4 +1,7 @@
 # Navigation Turing Test (NTT): Learning to Evaluate Human-Like Navigation
+
+**Important note [July 2025]**: All data download links are currently inactive as we transition the data to a new storage endpoint. If you require access to the data in the meantime, please reach out to rageorg@microsoft.com for support.
+
 All code and data to reproduce results in Section 5 of [Navigation Turing Test (NTT): Learning to Evaluate Human-Like Navigation [ICML 2021]](https://proceedings.mlr.press/v139/devlin21a.html) ([Arxiv 2105.09637](https://arxiv.org/abs/2105.09637)
 
 # Getting Started
