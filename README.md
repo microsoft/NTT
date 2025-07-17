@@ -14,18 +14,18 @@ Install Dependencies:
 # Human Navigation Turing Test (HNTT)
 To reproduce our analysis of responses to the HNTT included in Section 5.1 of the ICML paper:
 
-Download HNTT_data.csv from [this link](https://icml2021.z5.web.core.windows.net/HNTT_data.zip) (30KiB)
+Download HNTT_data.csv from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/HNTT_data.csv) (30KiB)
 
 Step through HNTT_data_analysis.ipynb notebook
 
 ## HNTT Survey Templates and Videos
-The HNTT survey templates, with the answer key embedded, can be downloaded from [this link](https://icml2021.z5.web.core.windows.net/icml2021-hntt-survey-templates.zip) (301KiB) 
+The HNTT survey templates, with the answer key embedded, can be downloaded from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/icml2021-hntt-survey-templates.zip) (301KiB) 
 
-The corresponding HNTT videos can be downloaded from [this link](https://icml2021.z5.web.core.windows.net/icml2021-hntt-videos.zip) (134MiB)
+The corresponding HNTT videos can be downloaded from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/icml2021-hntt-videos.zip) (134MiB)
 
 # Automated Navigation Turing Test (ANTT)
 ## Training ANTT Models (Section 3.3)
-To train ANTT models, download the training dataset from [this link](https://icml2021.z5.web.core.windows.net/ICML2021-train-data.zip) (1.95 GiB) then run:
+To train ANTT models, download the training dataset from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/ICML2021-train-data.zip) (1.95 GiB) then run:
 
     python train.py --model-type ['visuals', 'symbolic', 'topdown', 'barcode'] --human-train <path> --human-test <path> --agent-train <path> --agent-test <path>
 
@@ -43,7 +43,7 @@ To plot learning curves with variance (e.g. to reproduce figure 2 in the paper):
 
     python plot_ANTT_training.py
 
-[Optional] To reproduce the barcode or topdown data from the raw trajectories, run:
+***Optional*** To reproduce the barcode or topdown data from the raw trajectories, run:
     
     python topdown/create_topdown_img.py --folders <path(s)> --outdir <path>
     python barcodes/create_barcodes.py --indir <path> --outdir <path>
@@ -52,21 +52,21 @@ To plot learning curves with variance (e.g. to reproduce figure 2 in the paper):
 
 To reproduce ANTT analysis included in Section 5.2 of the ICML paper:
 
-Download HNTT_data.csv from [this link](https://icml2021.z5.web.core.windows.net/HNTT_data.zip) (30KiB)
+1. Download HNTT_data.csv from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/HNTT_data.zip) (30KiB)
 
-Download evaluation dataset from [this link](https://icml2021.z5.web.core.windows.net/ICML2021-eval-data.zip) (264MiB)
+2. Download evaluation dataset from [this link](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/ICML2021-eval-data.zip) (264MiB)
 
-Then either:
- + Download trained models (.pt files) and saved model output (.pkl) from [this link](https://icml2021.z5.web.core.windows.net/ICML2021-trained-models.zip) (9GiB)
- + Train your own ANTT models as described above
+3. Train your own ANTT models as described above.
 
-To evaluate a trained model:
+4. Evaluate the trained model:
 
+    ```
     python evaluate_ANTT_model.py --path-to-models PATH --model-type ['BARCODE', 'CNN', 'SYMBOLIC', 'TOPDOWN']
+    ```
 
-If model is a recurrent CNN or SYMBOLIC model, also pass --subsequence-length N
+If model is a recurrent CNN or SYMBOLIC model, also pass `--subsequence-length N`.
 
-If model has been previously evaluated, its output for each question in the behavioural study will be saved in a .pkl file. For faster re-evaluation (without classifying replays again) add --load-model-output
+If model has been previously evaluated, its output for each question in the behavioural study will be saved in a `.pkl` file. For faster re-evaluation (without classifying replays again) add `--load-model-output`.
 
 To reproduce Figures 9 and 10, plot the evaluation of all ANTT models by:
 
@@ -74,7 +74,7 @@ To reproduce Figures 9 and 10, plot the evaluation of all ANTT models by:
     
 # Passing the Navigation Turing Test
 
-In later work on ["How Humans Perceive Human-like Behavior in Video Game Navigation"](https://www.microsoft.com/en-us/research/publication/how-humans-perceive-human-like-behavior-in-video-game-navigation/) published at CHI 2022 we presented the first agent to pass the Navigation Turing Test. [Videos of the CHI 2022 agent are available here.](https://icml2021.z5.web.core.windows.net/videos-new-agent.zip)
+In later work on ["How Humans Perceive Human-like Behavior in Video Game Navigation"](https://www.microsoft.com/en-us/research/publication/how-humans-perceive-human-like-behavior-in-video-game-navigation/) published at CHI 2022 we presented the first agent to pass the Navigation Turing Test. [Videos of the CHI 2022 agent are available here.](https://huggingface.co/datasets/microsoft/ntt-icml2021/blob/main/videos-new-agent.zip)
 
 # License
 Code is licensed under MIT, data and all other content is licensed under Microsoft Research License Agreement (MSR-LA). See LICENSE folder.
